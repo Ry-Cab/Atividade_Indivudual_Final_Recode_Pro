@@ -24,6 +24,8 @@ import com.tripshow.api.repo.ClienteRepository;
 @RestController
 @RequestMapping("/")
 public class ClienteController {
+
+
 	//Chamando o Repositório para usar as funções CRUD
 		@Autowired
 		ClienteRepository clienteRepo;
@@ -34,20 +36,20 @@ public class ClienteController {
 			//Usando a função GET para listar todos os clientes registrados
 		}
 		
-		//Usando a função Post para criar Destinos
+		//Usando a função Post para registrar clientes
 		@PostMapping("/clientes")
 		public Cliente createCliente(@RequestBody Cliente cliente) {
 			return clienteRepo.save(cliente);
 		}
 		
-		//Usando a função GET para obter um destino pelo ID
+		//Usando a função GET para obter um cliente pelo ID
 		@GetMapping("/clientes/{id_cliente}")
 		public ResponseEntity<Cliente> getClienteById(@PathVariable Long id_cliente){
 			Cliente cliente = clienteRepo.findById(id_cliente).orElseThrow(() -> new ResourceNotFoundException("Cliente não encontrado com o id: " + id_cliente));
 			return ResponseEntity.ok(cliente);
 		}
 		
-		//Usando a função PUT para atualizar um Destino 
+		//Usando a função PUT para atualizar um Cliente 
 		@PutMapping("/clientes/{id_cliente}")
 		public ResponseEntity<Cliente> updateCliente(@PathVariable Long id_cliente, @RequestBody Cliente clienteDetails){
 			Cliente cliente = clienteRepo.findById(id_cliente).orElseThrow(() -> new ResourceNotFoundException("Cliente não encontrado com o id: " + id_cliente));
@@ -66,7 +68,7 @@ public class ClienteController {
 			return ResponseEntity.ok(updatedCliente);
 		}
 		
-		//Usando a função DELETE para deletar um destino
+		//Usando a função DELETE para deletar um Cliente
 		@DeleteMapping("/clientes/{id_cliente}")
 		public ResponseEntity<Map<String, Boolean>> deleteCliente(@PathVariable Long id_cliente){
 			Cliente cliente = clienteRepo.findById(id_cliente).orElseThrow(() -> new ResourceNotFoundException("Cliente não encontrado com o id: " + id_cliente));

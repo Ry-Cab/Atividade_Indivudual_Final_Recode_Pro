@@ -13,9 +13,12 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+//Classe modelo de clientes
 @Entity
 @Table(name =  "Clientes")
 public class Cliente {
+
+	//A anotação Id juntamente com a generatedValue indica um Id com auto incremento.
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_cliente;
@@ -34,18 +37,24 @@ public class Cliente {
 	
 	private String data_volta;
 	
+
+	/*
+	A entidade "clientes" está fortemente relacionada com a entidade "Passagens".
+	A anotação @OneToMany indica que é um relacionamento de Um Cliente para muitas passagens, e por
+	ser muitas passagens é necessário criar uma lista de passagens para entidade, facilitando o mapeamento.
+	
+	@JsonIgnore é uma anotação que indicq que essa lista na hora de retornar um Json de Clientes.
+	*/
+
 	@JsonIgnore
 	@OneToMany(mappedBy = "cliente")
 	private List<Passagem> passagens = new ArrayList<Passagem>();
 	
 	
+	//Métodos acessores (GETs e SETs)
 	public List<Passagem> getPassagens() {
 		return passagens;
 	}
-
-	
-	
-	
 
 	public Long getId_cliente() {
 		return id_cliente;
@@ -110,6 +119,5 @@ public class Cliente {
 	public void setData_volta(String data_volta) {
 		this.data_volta = data_volta;
 	}
-	
 	
 }

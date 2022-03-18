@@ -36,7 +36,7 @@ public class DestinoController {
 		//Usando a função GET para listar todos os destinos registrados
 	}
 	
-	//Usando a função Post para criar Destinos
+	//Usando a função Post para registrar Destinos
 	@PostMapping("/destinos")
 	public Destino createDestino(@RequestBody Destino destino) {
 		return destinoRepo.save(destino);

@@ -8,25 +8,36 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+//Classe de modelo de passagens
 @Entity
 @Table(name = "Passagens")
 public class Passagem {
-	
+
+	//A anotação Id juntamente com a generatedValue indica um Id com auto incremento.
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_passagem;
 	
 	private String data_compra;
 	
+	/*
+	A anotação @ManyToOne indica um relacionamento forte de muitas passagens
+	para um cliente.
+	 */
 	@ManyToOne
 	@JoinColumn(name = "cliente_id_cliente")
 	private Cliente cliente;
 	
+	/*
+	Anotação @ManyToOne
+	Muitas passagens para um destino
+	*/
 	@ManyToOne
 	@JoinColumn(name = "destino_id_destino")
 	private Destino destino;
 	
 	
+	//Métodos acessores (GETs e SETs)
 	public Long getId_passagem() {
 		return id_passagem;
 	}

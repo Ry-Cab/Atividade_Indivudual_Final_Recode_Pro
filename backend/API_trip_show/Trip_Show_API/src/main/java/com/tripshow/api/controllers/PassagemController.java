@@ -32,23 +32,23 @@ public class PassagemController {
 		@GetMapping("/passagens")
 		public List<Passagem> listAllPassagens(){
 			return passagemRepo.findAll();
-			//Usando a função GET para listar todos os destinos registrados
+			//Usando a função GET para listar todos as passagens registradas
 		}
 		
-		//Usando a função Post para criar Destinos
+		//Usando a função Post para registrar passagens
 		@PostMapping("/passagens")
 		public Passagem createPassagem(@RequestBody Passagem passagem) {
 			return passagemRepo.save(passagem);
 		}
 		
-		//Usando a função GET para obter um destino pelo ID
+		//Usando a função GET para acessar uma passagem pelo ID
 		@GetMapping("/passagens/{id_passagem}")
 		public ResponseEntity<Passagem> getPassagemById(@PathVariable Long id_passagem){
 			Passagem passagem = passagemRepo.findById(id_passagem).orElseThrow(() -> new ResourceNotFoundException("Passagem não encontrado com o id: " + id_passagem));
 			return ResponseEntity.ok(passagem);
 		}
 		
-		//Usando a função PUT para atualizar um Destino 
+		//Usando a função PUT para atualizar uma Passagem 
 		@PutMapping("/passagens/{id_passagem}")
 		public ResponseEntity<Passagem> updatePassagem(@PathVariable Long id_passagem, @RequestBody Passagem passagemDetails){
 			Passagem passagem = passagemRepo.findById(id_passagem).orElseThrow(() -> new ResourceNotFoundException("Passagem não encontrada com o id: " + id_passagem));
@@ -62,7 +62,7 @@ public class PassagemController {
 			return ResponseEntity.ok(updatedPassagem);
 		}
 		
-		//Usando a função DELETE para deletar um destino
+		//Usando a função DELETE para deletar uma Passagem
 		@DeleteMapping("/passagens/{id_passagem}")
 		public ResponseEntity<Map<String, Boolean>> deleteDestino(@PathVariable Long id_passagem){
 			Passagem passagem = passagemRepo.findById(id_passagem).orElseThrow(() -> new ResourceNotFoundException("Passagem não encontrada com o id: " + id_passagem));

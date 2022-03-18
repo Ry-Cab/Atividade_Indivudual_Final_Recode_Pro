@@ -40,6 +40,7 @@ public class Destino {
 	
 	@JsonIgnore é uma anotação que indicq que essa lista na hora de retornar um Json de Destinos.
 	*/
+
 	@JsonIgnore
 	@OneToMany(mappedBy = "destino")
 	private List<Passagem> passagens = new ArrayList<Passagem>();
@@ -58,21 +59,13 @@ public class Destino {
 		this.id_destino = id_destino;
 	}
 	
-	
-
 	public String getImagemURL_destino() {
 		return imagemURL_destino;
 	}
 
-
-
-
 	public void setImagemURL_destino(String imagemURL_destino) {
 		this.imagemURL_destino = imagemURL_destino;
 	}
-
-
-
 
 	public String getCidade_destino() {
 		return cidade_destino;
@@ -105,7 +98,5 @@ public class Destino {
 	public void setDesconto_destino(int desconto_destino) {
 		this.desconto_destino = desconto_destino;
 	}
-
-	
 
 }

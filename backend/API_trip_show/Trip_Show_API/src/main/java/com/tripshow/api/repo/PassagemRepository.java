@@ -6,5 +6,5 @@ import com.tripshow.api.model.Passagem;
 
 @Repository
 public interface PassagemRepository extends JpaRepository<Passagem, Long> {
-
+    	//Repositório extendido do JPA que possibilita usar as funções CRUD na tabela "Passagens"
 }
