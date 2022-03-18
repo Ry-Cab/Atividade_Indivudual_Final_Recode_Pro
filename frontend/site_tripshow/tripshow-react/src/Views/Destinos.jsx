@@ -37,10 +37,13 @@ class Destinos extends Component {
             {
                 this.state.destinos.map(
                    destinos =>
+                   destinos.desconto_destino == 0 || destinos.desconto_destino == null ?
                    <div>
                        
                        <a style={{marginLeft: "10px"}} onClick={ () => this.detailsDestinos(destinos.id_destino)}><CardDestino key={destinos.id_destino} Estado={destinos.estado_destino} Cidade={destinos.cidade_destino} Preco={destinos.preco_destino} img={destinos.imagemURL_destino} /></a>
                    </div>
+                   :
+                   <></>
 
                 )
                             

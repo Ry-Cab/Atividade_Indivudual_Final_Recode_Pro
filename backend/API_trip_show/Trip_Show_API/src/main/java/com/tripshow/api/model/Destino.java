@@ -12,11 +12,13 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+//Classe modelo de destino
+
 @Entity
 @Table(name = "Destinos")
 public class Destino {
 
-	//Modelo do Destino
+	//A anotação Id juntamente com a generatedValue indica um Id com auto incremento
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_destino;
@@ -31,17 +33,22 @@ public class Destino {
 	
 	private int desconto_destino;
 	
+	/*
+	A entidade "destinos" está fortemente relacionada com a entidade "Passagens".
+	A anotação @OneToMany indica que é um relacionamento de Um Destino para muitas passagens, e por
+	ser muitas passagens é necessário criar uma lista de passagens para entidade, facilitando o mapeamento.
+	
+	@JsonIgnore é uma anotação que indicq que essa lista na hora de retornar um Json de Destinos.
+	*/
 	@JsonIgnore
 	@OneToMany(mappedBy = "destino")
 	private List<Passagem> passagens = new ArrayList<Passagem>();
 	
-	
+	//Métodos acesspres (GETs e SETs).
+
 	public List<Passagem> getPassagens() {
 		return passagens;
 	}
-
-	
-	
 
 	public Long getId_destino() {
 		return id_destino;
