@@ -1,0 +1,39 @@
+CREATE DATABASE TripShow_BD;
+
+USE TripShow_BD
+
+CREATE TABLE public.clientes (
+	id_cliente bigserial NOT NULL,
+	cidade_cliente varchar(255) NULL,
+	data_ida varchar(255) NULL,
+	data_nascimento varchar(255) NULL,
+	data_volta varchar(255) NULL,
+	email_cliente varchar(255) NULL,
+	estado_cliente varchar(255) NULL,
+	nome_cliente varchar(255) NULL,
+	CONSTRAINT clientes_pkey PRIMARY KEY (id_cliente)
+);
+
+CREATE TABLE public.destinos (
+	id_destino bigserial NOT NULL,
+	cidade_destino varchar(255) NULL,
+	desconto_destino int4 NOT NULL,
+	estado_destino varchar(255) NULL,
+	imagemurl_destino varchar(255) NULL,
+	preco_destino float4 NOT NULL,
+	CONSTRAINT destinos_pkey PRIMARY KEY (id_destino)
+);
+
+CREATE TABLE public.passagens (
+	id_passagem bigserial NOT NULL,
+	data_compra varchar(255) NULL,
+	cliente_id_cliente int8 NULL,
+	destino_id_destino int8 NULL,
+	CONSTRAINT passagens_pkey PRIMARY KEY (id_passagem)
+);
+
+
+-- public.passagens foreign keys
+
+ALTER TABLE public.passagens ADD CONSTRAINT fk19mptgm0nj5a9j3bi41fmgido FOREIGN KEY (cliente_id_cliente) REFERENCES public.clientes(id_cliente);
+ALTER TABLE public.passagens ADD CONSTRAINT fkd3mwwaclbjjlb7ym59tyirl8 FOREIGN KEY (destino_id_destino) REFERENCES public.destinos(id_destino);

@@ -25,6 +25,7 @@ import com.tripshow.api.repo.PassagemRepository;
 @RestController
 @RequestMapping("/")
 public class PassagemController {
+	
 	//Chamando o Repositório para usar as funções CRUD
 		@Autowired
 		PassagemRepository passagemRepo;
