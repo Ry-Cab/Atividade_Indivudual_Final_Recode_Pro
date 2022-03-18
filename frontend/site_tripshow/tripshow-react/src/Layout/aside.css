@@ -1,0 +1,38 @@
+.jumbotron-img{
+    margin-top: -26px;
+    background-image: url('/public/img/home_images/mar.jpg');
+    background-repeat: no-repeat;
+   
+    background-position-y: center;
+}
+@media (max-width: 1000px){
+    
+    .form-card{
+        background-color: rgb(255, 255, 255);
+    
+        padding: 1em;
+        border-radius: 10px;
+        margin: 2rem;
+        width: 20%;
+    }
+    
+      
+}
+
+.form-card{
+    background-color: rgb(255, 255, 255);
+
+    padding: 1em;
+    border-radius: 10px;
+    margin: 2rem;
+    width: 35rem;
+}
+.form-card > h1{
+    color: black;
+}
+label{
+    color: black;
+}
+.form-group{
+    width: auto;
+}

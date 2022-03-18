@@ -1,0 +1,39 @@
+h1.h1-aside{
+    font-size: medium;
+    border: none;
+    
+}
+
+h1.h1-aside::after{
+    content: " →";
+}
+.jumbotron-img{
+    background-image: url('/public/img/home_images/mar.jpg');
+    background-position-y: center;
+}
+.col{
+    padding: -15px;
+}
+.form-card{
+    margin-left: 10px;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 200px;
+}
+
+form{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+@media (max-width: 1000px){
+    
+    .form-card{
+        margin-left: 10px;
+        width: 300px;
+        height: 200px;
+        margin-bottom: 150px;
+    }
+}

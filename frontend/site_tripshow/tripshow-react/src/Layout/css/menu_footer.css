@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+/*Configurações gerais de estilo*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+/*
+Paleta de Cores
+Laranja: #F75611
+Rosa: #F70C5B
+Azul: #1129FA
+Roxo: #8E00E0
+Azul Claro: #00CCFF
+*/
+
+/*Configurações de estilo do Nav*/
+.aside-nav-top{
+    font-size: 15px;
+    text-align: center;
+    background-color: #bec3f1;
+    color: white;
+    padding: 10px;
+    
+
+}
+nav{
+    color: white;
+    background-color: #1129FA;
+    display: flex;
+   
+    padding: 1.5em;
+
+    margin-bottom: 2%;
+}
+nav> img{
+    width: 5em;
+    height: 5em;
+    border-radius: 0.5em;
+}
+.link_area{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nav-link{
+    background-color: #F70C5B;
+    color: white;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-left: 2em;
+    margin-right: 1em;
+}
+
+.a_nav{
+    height: 5%;
+    width: auto;
+    
+    color: white;
+    background-color: #F70C5B;
+    
+    
+    text-decoration: none;
+    word-wrap: break-word;
+}
+.a_nav:hover{
+    background-color: #b10840;
+    
+}
+.navbar-toggler-icon{
+    background-color: #ff6523;
+    border-radius: 5px;
+}
+@media (max-width: 1000px){
+    
+    .nav-link{
+        margin: 5px;
+    }
+    
+      
+}
+
+/*Configurações de estilo do footer*/
+.footer{
+    width: auto;
+    margin-top: 2%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1129FA;
+    padding: 3em;
+    
+    
+}
+.footer > *{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.footer > img{
+    width: 5em;
+    height: 5em;
+    border-radius: 0.5em;
+}
+
+.a_footer{
+    color: white;
+    text-decoration: none;
+}
+.a_footer:hover{
+    color: #F70C5B;
+}

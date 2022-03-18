@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.tripshow.api.controllers.PassagemRepository&apos; to &apos;PassagemController&apos;&#x0D;&#x0A;- Original project: &apos;Trip_Show_API&apos;&#x0D;&#x0A;- Original element: &apos;com.tripshow.api.controllers.PassagemRepository&apos;&#x0D;&#x0A;- Renamed element: &apos;com.tripshow.api.controllers.PassagemController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;PassagemRepository&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.tripshow.api.controllers{PassagemRepository.java[PassagemRepository" matchStrategy="1" name="PassagemController" qualified="false" references="true" similarDeclarations="false" stamp="1646531497139" textual="false" version="1.0"/>
+</session>

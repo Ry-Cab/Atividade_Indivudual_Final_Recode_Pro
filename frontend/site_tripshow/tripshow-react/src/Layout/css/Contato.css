@@ -1,0 +1,22 @@
+form{
+    width: auto;
+    margin: 0%;
+}
+input.inputcontato{
+    width: auto;
+}
+textarea.form-control{
+    margin: 0%;
+}
+form.formcontato{
+    color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f75611da;
+    padding: 20px;
+    border-radius: 10px;
+}
+label.labelcontato{
+    color: white;
+}

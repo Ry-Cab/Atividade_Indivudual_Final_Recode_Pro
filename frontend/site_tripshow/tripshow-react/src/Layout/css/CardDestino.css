@@ -1,0 +1,27 @@
+
+.container_compra{
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.card_compra{
+    width: 15rem;
+ 
+    size: auto;
+    
+}
+
+@media (max-width: 1000px){
+    .container_compra{
+        margin: auto;
+
+    }
+    .card_compra{
+        margin: auto;
+    }   
+}
+
+
+
+

@@ -1,0 +1,27 @@
+
+
+nav{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.nav-item{
+    background-color: #F75611;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 2px;
+}
+Link{
+    color: white;
+}
+Link:hover{
+    color: black;
+}
+img{
+    width: 3.5em;
+    height: 3.5em;
+    margin-right: 5px;
+    border-radius: 0.5em;
+}
